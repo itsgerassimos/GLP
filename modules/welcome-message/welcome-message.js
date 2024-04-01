@@ -1,5 +1,5 @@
 const welcomeMessage = `
-MADE BY GERASSIMOS MOUTAFIS. COPYRIGHT © GERASSIMOS MOUTAGIS 2024
+MADE BY GERASSIMOS MOUTAFIS. COPYRIGHT © GERASSIMOS MOUTAFIS 2024
 \x1b[35m
     ░▒▓██████▓▒░░▒▓█▓▒░      ░▒▓███████▓▒░  
     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
