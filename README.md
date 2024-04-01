@@ -1,5 +1,5 @@
 
-![GLP GIT](https://github.com/itsgerassimos/GLP/assets/136891956/3aa14a4f-1483-4267-8e52-8d6fb0ad4c60)
+![GLP](https://github.com/itsgerassimos/GLP/assets/136891956/ac6966f4-57eb-4b86-9ed6-b72671350a35)
 
 # GLANG GLP
 
