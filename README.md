@@ -1,7 +1,5 @@
-
-![GLP](https://github.com/itsgerassimos/GLP/assets/136891956/ac6966f4-57eb-4b86-9ed6-b72671350a35)
-
 # GLANG GLP
+![GLP](https://github.com/itsgerassimos/GLP/assets/136891956/ac6966f4-57eb-4b86-9ed6-b72671350a35)
 
 GLP is an expandable interpreted functional general purpose programming language. 
 
