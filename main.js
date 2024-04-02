@@ -69,7 +69,7 @@ const processInput = (input) => {
       fs.writeFileSync(outputfilename, generatedCodeWithLibrary);
     }
     try {
-      console.error("I/O:\n");
+      console.error("I/O:");
 
       eval(generatedCodeWithLibrary);
     } catch (error) {

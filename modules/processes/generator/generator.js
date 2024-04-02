@@ -10,11 +10,25 @@ function generate(ast) {
 
     if (node.functionName === "makeFunction") {
       const funcName = node.functionArgs[0].replace(/^"|"$/g, ""); // Remove leading and trailing quotes
-      const [funcBody, ...args] = node.functionArgs.slice(1);
+      const [funcBody, funcReturn, ...args] = node.functionArgs.slice(1);
       result += `function ${funcName}(${args
         .map((arg) => arg.replace(/^"|"$/g, ""))
-        .join(", ")}){return(${generate(funcBody)})}`; // Handle nested function calls recursively
-    } else {
+        .join(", ")}){${generate(funcBody)};return(${generate(funcReturn)})}`; // Handle nested function calls recursively
+    } else if (node.functionName === "if" | node.functionName === "ifelse") {
+      const condition = generate(node.functionArgs[0]);
+      const ifBlock = generate(node.functionArgs[1]);
+      const elseBlock = node.functionArgs[2] ? generate(node.functionArgs[2]) : "";
+      result += `if (${condition}) {${ifBlock}}${elseBlock ? ` else {${elseBlock}}` : ""}`;
+    } else if (node.functionName === "create") {
+      const variableName = node.functionArgs[0] ? node.functionArgs[0].replace(/^"(.*)"$/, "$1") : "";
+      const variableValue = node.functionArgs[1] ? generate(node.functionArgs[1]) : undefined;
+      result += `let ${variableName}${variableValue ? ` = ${variableValue}` : ""}`;
+    } else if (node.functionName === "set") {
+      const variableName = node.functionArgs[0] ? node.functionArgs[0].replace(/^"(.*)"$/, "$1") : "";
+      const variableValue = node.functionArgs[1] ? generate(node.functionArgs[1]) : undefined;
+      result += `${variableName}${` = ${variableValue}`}`;
+    } 
+    else {
       result += `${node.functionName}(`;
 
       if (Array.isArray(node.functionArgs)) {

@@ -19,6 +19,10 @@ function divide(a, b) {
   return a / b;
 }
 
+function exp(a, b) {
+  return a^b;
+}
+
 function print(message) {
   console.log(message);
 }
@@ -38,25 +42,6 @@ function input(prompt) {
       resolve(input);
     });
   });
-}
-
-
-
-
-function ifelse(condition, trueValueOrFunc, falseValueOrFunc) {
-  if (condition) {
-      if (typeof trueValueOrFunc === 'function') {
-          return trueValueOrFunc();
-      } else {
-          return trueValueOrFunc;
-      }
-  } else {
-      if (typeof falseValueOrFunc === 'function') {
-          return falseValueOrFunc();
-      } else {
-          return falseValueOrFunc;
-      }
-  }
 }
 
 function more(a,b) {
