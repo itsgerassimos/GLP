@@ -39,8 +39,11 @@ Type functional commands in the form of:
         (\x1b[92mprint\x1b[0m \x1b[34m(arg)\x1b[0m):
         Prints the value of (arg)
 
+        (\x1b[92mif\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         (\x1b[92mifelse\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
-        Performs conditional branching where first \x1b[0m\x1b[34m(arg)\x1b[0m is a condition and second an action: \x1b[34m(arg)(arg)\x1b[0m
+        Performs conditional branching where first \x1b[0m\x1b[34m(arg)\x1b[0m is a condition, 
+        second an action third is alternative action: \x1b[34m(arg)(arg)\x1b[0m
+        Both \x1b[92mif\x1b[0m and \x1b[92mifelse\x1b[0m do the same but distinction is recommended for semantic purposes.
 
         (\x1b[92mmore\x1b[0m \x1b[34m(arg) (arg)\x1b[0m):
         Checks if the first \x1b[0m\x1b[34m(arg)\x1b[0m is more than the second \x1b[0m\x1b[34m(arg)\x1b[0m

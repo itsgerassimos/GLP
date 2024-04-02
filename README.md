@@ -1,3 +1,4 @@
+
 # GLANG GLP
 GLP is an expandable interpreted functional general purpose programming language. 
 
@@ -64,7 +65,7 @@ After installing, open the GLP command line and type commands:
 
 **Hello GLP World:**
 ```glp
-(makeFunction printABC (actions (print (a)) (print (b)) (print (c)))  a b c); (printABC Hello GPL World)
+(makeFunction printABC (actions (print (a)) (print (b)) (print (c))) ()  a b c); (printABC Hello GPL World)
 ```
 
 **`prints 'Hello`**  
@@ -75,7 +76,7 @@ After installing, open the GLP command line and type commands:
 
 **Complex Example:**
 ```glp
-(myvariable=10); (makeFunction sub (subtract (b) (a)) b a); (print (sub (myvariable) 2));
+(create myvariable (10)); (makeFunction sub (create result (subtract (b) (a))) (result) b a); (print (sub (myvariable) 2));
 ```
 **`prints '8'`**  
 (b) (a) have parenthesis because they refer to the function's args
@@ -90,68 +91,71 @@ Type functional commands in the form of:
 which calls function-name passing all following if any args/sub-functions: (arg) ... (arg)
 
 **Important Functions:**
+        (makeFunction function-name (body) (return) (arg) ... (arg)):
+        defines a function named function-name of process returning return and
+        args: (arg) ... (arg)
 
-```
-(makeFunction function-name (process) (arg) ... (arg)):
-```
-
-defines a function named function-name of process and args: (arg) ... (arg)
-
-```
-(add (arg) ... (arg)):
-```
+    (add (arg) ... (arg)):
 
 Adds two numbers with args: (arg) ... (arg)
 
-```
-(subtract (arg) ... (arg)):
-```
+    (subtract (arg) ... (arg)):
 
 Subtracts two numbers with args: (arg) ... (arg)
 
-```
-(multiply (arg)(arg)):
-```
+    (multiply (arg) ... (arg)):
 
 Multiplies two numbers
 
-```
-(divide (arg) (arg)):
-```
+    (divide (arg) (arg)):
 
 Divides two numbers
 
-```
-(print (arg)):
-```
+    (exp (arg) (arg)):
 
-Prints the value of arg
+Returns exp: (arg)^(arg)
 
-```
-(ifelse (arg) ... (arg)):
-```
+    (print (arg)):
 
-Performs conditional branching where first arg is a condition and second an action: (arg)(arg)
+Prints the value of (arg)
 
-```
-(more (arg) (arg)):
-```
+    (if (arg) ... (arg)):
+    (ifelse (arg) ... (arg)):
 
-Checks if the first argument is more than the second argument
+Performs conditional branching where first (arg) is a condition, second an action third is alternative action. Both if and ifelse do the same but distinction is recommended for semantic purposes.
 
-```
-(less (arg)(arg)):
-```
+    (more (arg) (arg)):
 
-Checks if the first argument is less than the second argument
+Checks if the first (arg) is more than the second (arg)
 
-```
-(actions (arg) ... (arg)):
-```
+    (less (arg)(arg)):
 
+Checks if the first (arg) is less than the second (arg)
+
+    (actions (arg) ... (arg)):
 Consequently calls each (arg) function
 
 **Special non-GLP Commands:**
 
 - exit: terminates job.
 - file: min.glp generates code for file to console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
