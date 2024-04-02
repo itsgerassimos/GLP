@@ -1,15 +1,15 @@
 // Define functions for the standard library as raw code
 const stdlibCode = `
-function add(a, b) {
-  return a + b;
+function add(...args) {
+  return args.reduce((acc, curr) => acc + curr, 0);
 }
 
-function subtract(a, b) {
-  return a - b;
+function subtract(...args) {
+  return args.reduce((acc, curr) => acc - curr);
 }
 
-function multiply(a, b) {
-  return a * b;
+function multiply(...args) {
+  return args.reduce((acc, curr) => acc * curr, 1);
 }
 
 function divide(a, b) {
