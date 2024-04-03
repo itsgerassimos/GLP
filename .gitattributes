@@ -1,1 +1,2 @@
-*.g    linguist-language=JAVA
+*.g linguist-language=Custom
+
