@@ -1,6 +1,6 @@
-
 # GLANG GLP
-GLP is an expandable interpreted functional general purpose programming language. 
+
+GLP is an expandable interpreted functional general purpose programming language.
 
 ![GLP](https://github.com/itsgerassimos/GLP/assets/136891956/ac6966f4-57eb-4b86-9ed6-b72671350a35)![slp svg](https://github.com/itsgerassimos/GLP/assets/136891956/c7d503ef-d9d2-417b-bd3b-fb0859586fbd)<svg width="227" height="292" viewBox="0 0 227 292" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M35.0099 0H210.06V291.75H35.0099V0Z" fill="#FFFF00"/>
@@ -44,16 +44,14 @@ GLP is an expandable interpreted functional general purpose programming language
 - **If-Statements**: construct if/else branches
 - **Consequental Actions**: use actions function for consequental calls
 
-
-
 ## Getting Started
 
-**Installation**: 
+**Installation**:
 
-**Install Without Customization**: 
+**Install Without Customization**:
 If you want to simply use the langauge without customization features you can download [GLP](https://github.com/itsgerassimos/GLP/tree/main/build) for your platform of choice (Win, Linux, Mac)
 
-**Install With Customization(Recommended)**: 
+**Install With Customization(Recommended)**:
 If you want to customize the langauge as well langauge you may fork the project and run [GLP](https://github.com/itsgerassimos/GLP/tree/main/build) for your platform of choice (Win, Linux, Mac)
 
 After installing, open the GLP command line and type commands:
@@ -61,51 +59,58 @@ After installing, open the GLP command line and type commands:
 **Example Usage**:
 
 **PRINTING:**
+
 ```glp
 (print Hello);
 ```
-**`prints 'Hello'`**  
 
-
+**`prints 'Hello'`**
 
 **COMPRARISON:**
+
 ```glp
 (print (more 5 4))
 ```
-**`prints 'true'`**  
 
+**`prints 'true'`**
 
 **Hello GLP World:**
+
 ```glp
 (makeFunction printABC (actions (print (a)) (print (b)) (print (c))) ()  a b c); (printABC Hello GPL World)
 ```
 
 **`prints 'Hello`**  
 **`GPL`**  
-**`World'`**  
-
-
+**`World'`**
 
 **Create Variables and Functions:**
+
 ```glp
 (create myvariable (10)); (makeFunction sub (create result (subtract (b) (a))) (result) b a); (print (sub (myvariable) 2));
 ```
-**`prints '8'`**  
 
+**`prints '8'`**
 
 **While Loops:**
+
 ```glp
 (create a (1));(while (less (a) 3) (actions (set a (add (a) 1)) (print (a)))))
 ```
+
 **`prints`**  
 **`'2`**  
 **`3'`**  
 **For Loops:**
+
 ```
 (for (i) (0) (less (i) 10) (actions (set i (add (i) 1)) (print (i)) ))
 ```
+
 prints 1 to 10
+
 ## Basic Documentation:
+
 Type functional commands in the form of:
 
 ```
@@ -115,12 +120,12 @@ Type functional commands in the form of:
 which calls function-name passing all following if any args/sub-functions: (arg) ... (arg)
 
 **Important Functions:**
+
 ```
         (makeFunction function-name (body) (return) (arg) ... (arg)):
 ```
 
-        defines a function named function-name of process returning return and
-        args: (arg) ... (arg)
+        defines a function named function-name of process returning (return) with args (arg) ... (arg))
 
         (create variableName ): creates variable named variableName
         (create variableName (arg)): creates and initializes variable named variableName with (arg) value
@@ -150,6 +155,8 @@ Returns exp: (arg)^(arg)
 
 Prints the value of (arg)
 
+        (input (arg)):
+        Returns value of (arg) after it being typed by user
     (if (arg) ... (arg)):
     (ifelse (arg) ... (arg)):
 
@@ -164,14 +171,15 @@ Checks if the first (arg) is more than the second (arg)
 Checks if the first (arg) is less than the second (arg)
 
     (actions (arg) ... (arg)):
+
 Consequently calls each (arg) function
 
-(for (arg) (arg) condition (arg)):
-runs a for loop for variable (arg) of initial value (arg) when condition executing (arg)
+(for (arg) (arg) (condition) (arg)):
+runs a for loop for variable (arg) of initial value (arg) when (condition) executing (arg)
 
 (while condition (arg)):
-        runs a while loop when condition executing (arg)
+runs a while loop when (condition) executing (arg)
 **Special non-GLP Commands:**
 
 - exit: terminates job.
-- file: min.glp generates code for file to console
+- file inputfilename.glp generates code for file inputfilename.glp to console

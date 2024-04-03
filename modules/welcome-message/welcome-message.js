@@ -18,10 +18,10 @@ Type functional commands in the form of:
 
 \x1b[36mImportant Functions:\x1b[0m
         (\x1b[92mmakeFunction\x1b[0m \x1b[35mfunction-name\x1b[0m (\x1b[90mbody\x1b[0m) (\x1b[90mreturn\x1b[0m) \x1b[34m(arg) ... (arg)\x1b[0m):
-        defines a function named \x1b[35mfunction-name\x1b[0m of \x1b[90mprocess\x1b[0m returning \x1b[90mreturn\x1b[0m and 
-        args: \x1b[34m(arg) ... (arg)\x1b[0m
+        defines a function named \x1b[35mfunction-name\x1b[0m of \x1b[90mprocess\x1b[0m returning \x1b[90m(return)\x1b[0m and 
+        with args: \x1b[34m(arg) ... (arg)\x1b[0m
 
-        (\x1b[92mcreate\x1b[0m \x1b[35mvariableName\x1b[0m :
+        (\x1b[92mcreate\x1b[0m \x1b[35mvariableName)\x1b[0m :
                 creates a variable named \x1b[35mvariableName\x1b[0m
         (\x1b[92mcreate\x1b[0m \x1b[35mvariableName\x1b[0m \x1b[34m(arg)\x1b[0m):
                 creates and initializes variable named \x1b[35mvariableName\x1b[0m with \x1b[34m(arg)\x1b[0m) value
@@ -44,7 +44,10 @@ Type functional commands in the form of:
         Returns exp: \x1b[0m\x1b[34m(arg)\x1b[0m^\x1b[0m\x1b[34m(arg)\x1b[0m
 
         (\x1b[92mprint\x1b[0m \x1b[34m(arg)\x1b[0m):
-        Prints the value of (arg)
+        Prints the value of \x1b[34m(arg)\x1b[0m
+
+        (\x1b[92minput\x1b[0m \x1b[34m(arg)\x1b[0m):
+        Returns value of \x1b[34m(arg)\x1b[0m after it being typed by user
 
         (\x1b[92mif\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         (\x1b[92mifelse\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
@@ -61,15 +64,15 @@ Type functional commands in the form of:
         (\x1b[92mactions\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         Consequently calls each \x1b[0m\x1b[34m(arg)\x1b[0m function
 
-        (\x1b[92mfor\x1b[0m \x1b[35m(arg)\x1b[0m (\x1b[90marg\x1b[0m) \x1b[34mcondition\x1b[0m (arg)):
-                runs a for loop for variable \x1b[35m(arg)\x1b[0m of initial value (\x1b[90marg\x1b[0m) when \x1b[34mcondition\x1b[0m executing (arg)
+        (\x1b[92mfor\x1b[0m \x1b[35m(arg)\x1b[0m (\x1b[90marg\x1b[0m) \x1b[34m(condition)\x1b[0m (arg)):
+                runs a for loop for variable \x1b[35m(arg)\x1b[0m of initial value (\x1b[90marg\x1b[0m) when \x1b[34m(condition)\x1b[0m executing (arg)
 
-        (\x1b[92mwhile\x1b[0m \x1b[34mcondition\x1b[0m (arg)):
-                runs a while loop when \x1b[34mcondition\x1b[0m executing (arg)
+        (\x1b[92mwhile\x1b[0m \x1b[34m(condition)\x1b[0m (arg)):
+                runs a while loop when \x1b[34m(condition)\x1b[0m executing (arg)
 
 \x1b[36mSpecial non-GLP Commands:\x1b[0m
         \x1b[36mexit\x1b[0m: terminates job.
-        \x1b[36mfile\x1b[0m: min.glp generates code for \x1b[36mfile\x1b[0m to console
+        \x1b[36mfile\x1b[0m: \x1b[35minputfilename.glp\x1b[0m generates code for \x1b[35minputfilename.glp\x1b[0m to console
         
         For more documentation visit \x1b[0m \x1b[35mhttps://github.com/itsgerassimos/GLP/\x1b[0m  
 `;
