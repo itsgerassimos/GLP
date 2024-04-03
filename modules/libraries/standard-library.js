@@ -1,5 +1,6 @@
 // Define functions for the standard library as raw code
 const stdlibCode = `
+// Math
 function add(...args) {
   return args.reduce((acc, curr) => acc + curr, 0);
 }
@@ -23,10 +24,11 @@ function exp(a, b) {
   return a^b;
 }
 
+// I/O
+
 function print(message) {
   console.log(message);
 }
-
 
 function input(prompt) {
   const readline = require('readline');
@@ -44,6 +46,8 @@ function input(prompt) {
   });
 }
 
+
+// Comparison
 function more(a,b) {
   if(a>b){
     return true;
@@ -60,6 +64,7 @@ function less(a,b) {
   }
 }
 
+// Multiple Sequential Function Calls
 function actions(...funcs) {
   funcs.forEach(func => {
     if (typeof func === 'function') {
@@ -69,6 +74,29 @@ function actions(...funcs) {
     }
   });
 }
+
+// Data Types
+
+// Arrays
+function createArray(...values) {
+  return values;
+}
+function pushToArray(arr, value) {
+  arr.push(value);
+  return arr;
+}
+function popArray(arr) {
+  arr.pop();
+  return arr;
+}
+function spliceArray(arr, n) {
+  if (n < 0 || n >= arr.length) {
+    return arr; // Return the original array if index is out of bounds
+  }
+  arr.splice(n, 1); // Remove the element at index n
+  return arr;
+}
+
 `;
 
 // Export the raw code as a string

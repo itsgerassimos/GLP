@@ -19,7 +19,21 @@ function generate(ast) {
       const ifBlock = generate(node.functionArgs[1]);
       const elseBlock = node.functionArgs[2] ? generate(node.functionArgs[2]) : "";
       result += `if (${condition}) {${ifBlock}}${elseBlock ? ` else {${elseBlock}}` : ""}`;
-    } else if (node.functionName === "create") {
+    } else if (node.functionName === "while") {
+      const condition = generate(node.functionArgs[0]);
+      const whileBlock = generate(node.functionArgs[1]);
+      result += `while (${condition}) {${whileBlock}}`;
+    }  else if (node.functionName === "for") {
+      const variable = generate(node.functionArgs[0]);
+      const variableValue = generate(node.functionArgs[1]);
+
+      const condition = generate(node.functionArgs[2]);
+
+      const forBlock = generate(node.functionArgs[3]);
+      result += `for (let ${variable} = ${variableValue}; ${condition}; ){${forBlock}}`;
+    }
+
+    else if (node.functionName === "create") {
       const variableName = node.functionArgs[0] ? node.functionArgs[0].replace(/^"(.*)"$/, "$1") : "";
       const variableValue = node.functionArgs[1] ? generate(node.functionArgs[1]) : undefined;
       result += `let ${variableName}${variableValue ? ` = ${variableValue}` : ""}`;
