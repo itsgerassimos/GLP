@@ -35,5 +35,5 @@ GLP is an expandable interpreted functional general purpose programming language
 - **Recursive**: GLANG GLP supports recursion, allowing functions to call themselves.
 
 ## Getting Started
-Get started guide and documentation: https://itsgerassimos.github.io/GLP/
+The Getting-Started guide and documentation are available here: https://itsgerassimos.github.io/GLP/
 
