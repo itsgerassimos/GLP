@@ -30,19 +30,9 @@ GLP is an expandable interpreted functional general purpose programming language
 
 ## Characteristics
 
-- **Functional Programming**: GLANG GLP is function-focused; everything is a function call or definition
-- **Expandable**: GLANG GLP is expandable, allowing easy integration of JS libraries
-- **Recursive**: GLANG GLP is recursive by nature, allowing functions get called from the inside.
-
-## Feautures
-
-- **Arithmetic Operations**: add, subtract, multipy, divide
-- **Comparisons**: compare which value is more or less than another
-- **Variables**: create, set variables
-- **Functions**: create alter functions
-- **Loops**: construct while/for functional loops
-- **If-Statements**: construct if/else branches
-- **Consequental Actions**: use actions function for consequental calls
+- **Functional Programming**: GLANG GLP is function focused; everything is a function call or definition. Variables are considered constant functions which can be rewritten.
+- **Expandable**: GLANG GLP is designed to be expandable, by allowing easy integration of JS functions. A primary example of this is the Standard Library file.
+- **Recursive**: GLANG GLP supports recursion, allowing functions to call themselves.
 
 ## Getting Started
 
@@ -86,28 +76,12 @@ After installing, open the GLP command line and type commands:
 
 **Create Variables and Functions:**
 
+**Complex Example:**
 ```glp
 (create myvariable (10)); (makeFunction sub (create result (subtract (b) (a))) (result) b a); (print (sub (myvariable) 2));
 ```
-
-**`prints '8'`**
-
-**While Loops:**
-
-```glp
-(create a (1));(while (less (a) 3) (actions (set a (add (a) 1)) (print (a)))))
-```
-
-**`prints`**  
-**`'2`**  
-**`3'`**  
-**For Loops:**
-
-```
-(for (i) (0) (less (i) 10) (actions (set i (add (i) 1)) (print (i)) ))
-```
-
-prints 1 to 10
+**`prints '8'`**  
+(b) (a) have parenthesis because they refer to the function's args
 
 ## Basic Documentation:
 
@@ -120,12 +94,9 @@ Type functional commands in the form of:
 which calls function-name passing all following if any args/sub-functions: (arg) ... (arg)
 
 **Important Functions:**
-
-```
         (makeFunction function-name (body) (return) (arg) ... (arg)):
-```
-
-        defines a function named function-name of process returning (return) with args (arg) ... (arg))
+        defines a function named function-name of process returning return and
+        args: (arg) ... (arg)
 
         (create variableName ): creates variable named variableName
         (create variableName (arg)): creates and initializes variable named variableName with (arg) value
@@ -174,11 +145,6 @@ Checks if the first (arg) is less than the second (arg)
 
 Consequently calls each (arg) function
 
-(for (arg) (arg) (condition) (arg)):
-runs a for loop for variable (arg) of initial value (arg) when (condition) executing (arg)
-
-(while condition (arg)):
-runs a while loop when (condition) executing (arg)
 **Special non-GLP Commands:**
 
 - exit: terminates job.
