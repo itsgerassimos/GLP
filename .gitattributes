@@ -1,1 +1,1 @@
-modules/** linguist-documentation=false
+*.g linguist-language=txt
