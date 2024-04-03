@@ -21,6 +21,13 @@ Type functional commands in the form of:
         defines a function named \x1b[35mfunction-name\x1b[0m of \x1b[90mprocess\x1b[0m returning \x1b[90mreturn\x1b[0m and 
         args: \x1b[34m(arg) ... (arg)\x1b[0m
 
+        (\x1b[92mcreate\x1b[0m \x1b[35mvariableName\x1b[0m :
+                creates a variable named \x1b[35mvariableName\x1b[0m
+        (\x1b[92mcreate\x1b[0m \x1b[35mvariableName\x1b[0m \x1b[34m(arg)\x1b[0m):
+                creates and initializes variable named \x1b[35mvariableName\x1b[0m with \x1b[34m(arg)\x1b[0m) value
+        (\x1b[92mset\x1b[0m \x1b[35mvariableName\x1b[0m \x1b[34m(arg)\x1b[0m):
+                initializes variable \x1b[35mvariableName\x1b[0m with \x1b[34m(arg)\x1b[0m) value
+        
         (\x1b[92madd\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         Adds two numbers with args: \x1b[34m(arg) ... (arg)\x1b[0m
 
@@ -54,9 +61,17 @@ Type functional commands in the form of:
         (\x1b[92mactions\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         Consequently calls each \x1b[0m\x1b[34m(arg)\x1b[0m function
 
+        (\x1b[92mfor\x1b[0m \x1b[35m(arg)\x1b[0m (\x1b[90marg\x1b[0m) \x1b[34mcondition\x1b[0m (arg)):
+                runs a for loop for variable \x1b[35m(arg)\x1b[0m of initial value (\x1b[90marg\x1b[0m) when \x1b[34mcondition\x1b[0m executing (arg)
+
+        (\x1b[92mwhile\x1b[0m \x1b[34mcondition\x1b[0m (arg)):
+                runs a while loop when \x1b[34mcondition\x1b[0m executing (arg)
+
 \x1b[36mSpecial non-GLP Commands:\x1b[0m
         \x1b[36mexit\x1b[0m: terminates job.
         \x1b[36mfile\x1b[0m: min.glp generates code for \x1b[36mfile\x1b[0m to console
+        
+        For more documentation visit \x1b[0m \x1b[35mhttps://github.com/itsgerassimos/GLP/\x1b[0m  
 `;
 
 module.exports = welcomeMessage;
