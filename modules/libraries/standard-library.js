@@ -21,7 +21,7 @@ function divide(a, b) {
 }
 
 function exp(a, b) {
-  return a^b;
+  return a**b;
 }
 
 // I/O
