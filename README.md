@@ -27,7 +27,7 @@ GLANG is a new hyper-functional programming language
 ## Getting Started
 Detailed Getting-Started guide and documentation are available here: https://itsgerassimos.github.io/GLP/
 
-For a quick heads-up Download the [GLANG I/O latest release](https://github.com/itsgerassimos/GLP/releases) and open the GLANG command line. Then start typing functional commands like:
+For a quick heads-up download the [GLANG I/O latest release](https://github.com/itsgerassimos/GLP/releases) and open the GLANG command line. Then start typing functional commands like:
 ```
 (print Hello World);
 ```
