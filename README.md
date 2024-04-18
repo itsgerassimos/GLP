@@ -25,5 +25,31 @@ GLANG is a new hyper-functional programming language
 - **Expandable**: GLANG GLP is infinitely expandable and supports JS integration.
 
 ## Getting Started
-The Getting-Started guide and documentation are available here: https://itsgerassimos.github.io/GLP/
+Detailed Getting-Started guide and documentation are available here: https://itsgerassimos.github.io/GLP/
+
+For a quick heads-up Download the [GLANG I/O latest release](https://github.com/itsgerassimos/GLP/releases) and open the GLANG command line. Then start typing functional commands like:
+```
+(print Hello World);
+```
+
+```
+(ifelse (more 5 3) (print 5) (print 3));
+```
+
+```
+(create a (1)); (while (less (a) 10) (actions (set a (add (a) 1)) (print (a) ) )));
+```
+
+```
+(for (i) (0) (less (i) 10) (actions (set i (add (i) 1)) (print (i)) ))
+```
+
+```
+(makeFunction reversePrint (actions (print (c)) (print (b)) (print (a))) () a b c);
+(reversePrint Hello GPL World);
+```
+
+![318423470-ac6966f4-57eb-4b86-9ed6-b72671350a35](https://github.com/itsgerassimos/itsgerassimos/assets/136891956/19f0cc51-0164-4385-8c40-0645f07d478d)
+
+
 
