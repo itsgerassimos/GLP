@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLP GLANG: Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="intro">
+        <div>
+            <h1 class="black">GLP // GLANG</h1>
+            <h2>empower your code with GLANG</h2>
+        </div>
+
+        <div class="center">
+            <a href="index.html"><img src="logo.svg" alt="GLP GLANG LOGO"/></a>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="black fg-black">Documentation</h3>
+
+        <h3 class="fg-black">All functions and guides can be found here</h3>
+
+        <h3 class="black fg-black">Running GLP</h3>
+        <h3 class="fg-black">Quick // Easy Start</h3>
+        <h3>Download the <a href="https://github.com/itsgerassimos/GLP/releases">GLANG I/O latest release</a> and open the command line</h3>
+        <h3 class="fg-black">Advanced Start</h3>
+        <h3>Fork the <a href="https://github.com/itsgerassimos/GLP">GLP repo</a>, customize the 
+            <a href="https://github.com/itsgerassimos/GLP/blob/main/modules/libraries/std-raw.js">std-raw.js</a>
+        (if you want to expand the standard library), type node main.js and start running code 
+        </h3>
+        <h3 class="fg-black">Build GLP</h3>
+        <h3>Fork the <a href="https://github.com/itsgerassimos/GLP">GLP repo</a>, and run "pkg main"
+</h3>
+
+
+        <h3 class="black fg-black">Philosophy</h3>
+
+        <h3 class="fg-black">How to call functions</h3>
+
+        <div class="code-block">
+            <h3>Type functional commands in the form of:</h3>
+            <h3>(function-name (arg) ... (arg))</h3>
+        </div>
+
+        <div class="code-block">
+            <h3>which calls function-name passing all following if any:</h3>
+            <h3>(arg) ... (arg)</h3>
+        </div>
+
+        <h3 class="black fg-black">Standard Library</h3>
+
+        <h3 class="fg-black">
+            To modify/add functions to the standard library, change
+            <a href="https://github.com/itsgerassimos/GLP/blob/main/modules/libraries/std-raw.js">std-raw.js</a>
+            to your liking
+        </h3>
+
+        <h3 class="black fg-black">Fundamental Standard Library Functions</h3>
+
+        <h3 class="fg-black">Function Definition</h3>
+
+        <div class="code-block">
+            <h3>(makeFunction function-name (body) (return) (arg) ... (arg));</h3>
+            <h3>
+                defines a function named function-name of process returning (return)
+                with args (arg) ... (arg))
+            </h3>
+        </div>
+
+        <h3 class="fg-black">Variables</h3>
+        <div class="code-block">
+            <h3>(create variableName);</h3>
+            <h3>creates a variable named variableName</h3>
+        </div>
+        <div class="code-block">
+            <h3>(create variableName (arg));</h3>
+            <h3>
+                creates and initializes variable named variableName with (arg) value
+            </h3>
+        </div>
+
+        <div class="code-block">
+            <h3>(set variableName (arg));</h3>
+            <h3>initializes variable variableName with (arg)) value</h3>
+        </div>
+
+        <h3 class="fg-black">If Statements</h3>
+        <div class="code-block">
+            <h3>
+                (if (arg) ... (arg));<br />
+                (ifelse (arg) ... (arg)):
+            </h3>
+            <h3>
+                Performs conditional branching where first (arg) is a condition,</br>
+                second an action third is alternative action: (arg)(arg) Both if and</br>
+                ifelse do the same but distinction is recommended for semantic
+                purposes.
+            </h3>
+        </div>
+        <h3 class="fg-black">For/While Loops</h3>
+        <div class="code-block">
+            <h3>
+                (for (arg) (arg) (condition) (arg));
+            </h3>
+            <h3>
+                runs a for loop for variable (arg) of initial value (arg) when (condition) executing (arg)
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                (while (condition) (arg));
+            </h3>
+            <h3>
+                runs a while loop when (condition) executing (arg)
+            </h3>
+        </div>
+
+        <h3 class="fg-black">Arithmetics</h3>
+        <div class="code-block">
+            <h3>
+                (add (arg) ... (arg));
+            </h3>
+            <h3>
+                Adds two numbers with args: (arg) ... (arg)
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                (subtract (arg) ... (arg));
+            </h3>
+            <h3>
+                Subtracts two numbers with args: (arg) ... (arg)
+
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                (multiply (arg) ... (arg));
+            </h3>
+            <h3>
+                Multiplies two numbers
+            </h3>
+        </div>
+
+        <div class="code-block">
+            <h3>
+                (divide (arg) (arg));
+            </h3>
+            <h3>
+                Divides two numbers
+
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                (exp (arg) (arg));
+            </h3>
+            <h3>
+                Returns exp: (arg)^ (arg)
+            </h3>
+        </div>
+
+        <h3 class="fg-black">I/O</h3>
+
+        <div class="code-block">
+            <h3>
+                (print (arg) ... (arg));
+            </h3>
+            <h3>
+                Prints the value of (arg)
+
+
+            </h3>
+        </div>
+        
+        <div class="code-block">
+            <h3> Coming soon:
+                (input (arg));
+            </h3>
+            <h3>
+                Returns value of (arg) after it being typed by user
+            </h3>
+        </div>
+        <h3 class="fg-black">Comparison</h3>
+
+        <div class="code-block">
+            <h3>
+                (more (arg) (arg));
+            </h3>
+            <h3>
+                Checks if the first (arg) is more than the second (arg)
+
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                (less (arg) (arg));
+            </h3>
+            <h3>
+                Checks if the first (arg) is less than the second (arg)
+            </h3>
+        </div>
+
+        <h3 class="fg-black">Consequential Calls</h3>
+
+        <div class="code-block">
+            <h3>
+                (actions (arg) ... (arg));
+            </h3>
+            <h3>
+                Consequently, calls each (arg) function
+            </h3>
+        </div>
+
+        <h3 class="fg-black">Comments</h3>
+
+        <div class="code-block">
+            <h3>
+                (comment (arg) ... (arg));
+            </h3>
+            <h3>
+                Returns ()
+            </h3>
+        </div>
+
+
+        <h3 class="fg-black">Comments</h3>
+
+        <div class="code-block">
+            <h3>
+                (comment (arg) ... (arg));
+            </h3>
+            <h3>
+                Returns ()
+            </h3>
+        </div>
+        <h3 class="black fg-black">Special non-GLP Commands</h3>
+        <h3 class="fg-black">Use those commands on the GLP command prompt</h3>
+
+        <div class="code-block">
+            <h3>
+                exit
+            </h3>
+            <h3>
+                exits the GLP console the program
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                file inputfilename.glp
+            </h3>
+            <h3>
+                set console input to GLP/filename.g (read file) (example file in GLP/g.g)
+            </h3>
+        </div>
+        <div class="code-block">
+            <h3>
+                out filename.js
+            </h3>
+            <h3>
+                set output to be copyed to filename.js (write file) (example file in GLP/out.js)
+            </h3>
+        </div>
+    </div>
+    <div class="intro">
+        <div>
+            <h2 class="black">GLP // GLANG</h2>
+            <h3>empower your code with GLANG</h3>
+            <h4>made by Gerassimos</h4>
+            <h4>Copyright © Gerassimos Moutafis 2024</h4>
+        </div>
+        <div class="center">
+            <img src="logo.svg" alt="GLP GLANG LOGO" />
+        </div>
+    </div>
+</body>
+
+</html>

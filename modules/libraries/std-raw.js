@@ -92,17 +92,28 @@ function add(...args) {
   
   //// I/O
   
-  /// Print a message to the console.
-  /// @param {string} message - The message to print.
-  function print(message) {
-    console.log(message);
+  /// Print messages to the console.
+/// @param {...*} args - The messages to print.
+function print(...args) {
+    args.forEach(arg => console.log(arg));
   }
   
-  /// Read input from the user.
+/// Print messages to the console.
+/// @param {...*} args - The messages to print.
+function log(...args) {
+    console.log(...args);
+  }
+
+
+  /// Known Bug! Fix coming soon! Read input from the user.
   /// @param {string} prompt - The prompt to display to the user.
   /// @returns {Promise<string>} - A promise resolving to the user's input.
-  async function input(prompt) {
-    // Implementation details...
+  function input(prompt) {
+    return new Promise((resolve) => {
+      IOS.question(prompt, (userInput) => {
+        resolve(userInput);
+      });
+    });
   }
   
   //// Comparison
@@ -161,5 +172,10 @@ function add(...args) {
     }
     arr.splice(n, 1); // Remove the element at index n
     return arr;
+  }
+
+  ///
+  function comment (...values){
+    return
   }
   

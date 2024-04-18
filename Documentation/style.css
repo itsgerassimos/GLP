@@ -1,0 +1,128 @@
+:root {
+  --bg-color: #000000;
+  --green-color: #5EFFB1;
+  --white-color: #FFFFFF;
+}
+
+*,
+*::before,
+* *::after {
+  box-sizing: border-box;
+  margin: 0rem;
+  font-weight: 300;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background: var(--bg-color);
+  color: var(--white-color);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+
+h1{
+  font-size: 128px;
+  color: var(--green-color);
+}
+
+h2{
+  font-size: 96px;
+
+  color: var(--white-color);
+
+}
+h3{
+  font-size: 64px;
+  padding: 1rem;
+
+}
+h4{
+  font-size: 32px;
+  padding: 1rem;
+
+}
+.black{
+  font-weight: 900;
+}
+
+.fg-black{
+  color: var(--bg-color);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.intro{
+  display: flex;
+  padding: 10rem;
+
+}
+
+
+
+#intro > div:first-child {
+  flex: 4;
+}
+
+#intro > div:last-child {
+  flex: 4;
+}
+
+.main{
+  background: var(--green-color);
+  padding: 10rem;
+  padding-top: 5rem;
+}
+
+
+
+.code-block{
+  background: var(--bg-color);
+  color: var(--white-color);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  border-radius: 3rem;
+
+
+}
+
+.code-block > h3:first-child {
+  font-weight: 500;
+font-size: 2rem;
+}
+
+.code-block > h3:last-child {
+  flex: 4;
+  font-size: 2rem;
+
+}
+
+
+
+
+
+
+a:link {
+  font-weight: 900;
+  text-decoration: underline;
+}
