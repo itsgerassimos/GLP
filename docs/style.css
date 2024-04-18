@@ -37,27 +37,6 @@ html {
 }
 
 
-h1{
-  font-size: 128px;
-  color: var(--green-color);
-}
-
-h2{
-  font-size: 96px;
-
-  color: var(--white-color);
-
-}
-h3{
-  font-size: 64px;
-  padding: 1rem;
-
-}
-h4{
-  font-size: 32px;
-  padding: 1rem;
-
-}
 .black{
   font-weight: 900;
 }
@@ -73,7 +52,6 @@ h4{
 
 .intro{
   display: flex;
-  padding: 10rem;
 
 }
 
@@ -89,8 +67,7 @@ h4{
 
 .main{
   background: var(--green-color);
-  padding: 10rem;
-  padding-top: 5rem;
+
 }
 
 
@@ -106,16 +83,6 @@ h4{
 
 }
 
-.code-block > h3:first-child {
-  font-weight: 500;
-font-size: 2rem;
-}
-
-.code-block > h3:last-child {
-  flex: 4;
-  font-size: 2rem;
-
-}
 
 
 
@@ -125,4 +92,136 @@ font-size: 2rem;
 a:link {
   font-weight: 900;
   text-decoration: underline;
+}
+
+
+
+.menu{
+  display: flex;
+
+}
+.menu h4 a {
+  text-decoration: none;
+}
+
+
+.underline{
+  text-decoration: underline;
+}
+
+
+.osses{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+  color: var(--green-color);
+}
+h2{
+
+  color: var(--white-color);
+
+}
+
+
+h3{
+
+  padding: 1rem;
+
+}
+h4{
+  padding: 1rem;
+
+}
+
+.intro{
+  padding: 10rem;
+
+}
+.main{
+  padding: 10rem;
+  padding-top: 5rem;
+}
+
+
+
+.code-block > h3:first-child {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.code-block > h3:last-child {
+  flex: 4;
+  font-size: 2rem;
+
+}
+
+h1{
+  font-size: 128px;
+}
+
+h2{
+  font-size: 96px;
+
+
+}
+h3{
+  font-size: 64px;
+
+}
+h4{
+  font-size: 32px;
+
+}
+@media screen and (max-width: 1000px) {
+	h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  
+  }
+  h3{
+    font-size: 1.75rem;
+  
+  }
+  h4{
+    font-size: 1rem;
+
+  
+  }
+  .intro{
+    padding: 1rem;
+  
+  }
+  .main{
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+
+  
+.code-block > h3:first-child {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.code-block > h3:last-child {
+  flex: 4;
+  font-size: 1rem;
+
+}
 }
