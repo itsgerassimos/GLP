@@ -10,21 +10,30 @@
 </head>
 
 <body>
+
     <ul class="menu">
-        <h4 class="underline"><a href="index.html">Home // Get Started</a></h4>
-        <h4><a href="documentation.html">Documentation // Guides</a></h4>
-        <h4><a href="download.html">Download // Releases</a></h4>
+        <h4 class="underline"><a href="index.html">Home <span class="toggle">// Get Started</span></a></h4>
+        <h4><a href="documentation.html">Documentation <span class="toggle">// Guides</span></a></h4>
+        <h4>
+            <a href="download.html">Download <span class="toggle">// Releases</span></a>
+        </h4>
     </ul>
     <div class="intro">
-        
+
         <div>
             <h1 class="black">GLP // GLANG</h1>
             <h2>empower your code with GLANG</h2>
+                <div class="download-button">
+                    <a href="./download.html">
+                    <h2>Download</h2>
+                </a>
+
+                </div>
         </div>
         <div class="center">
-            <a href="index.html"><img src="logo.svg" alt="GLP GLANG LOGO"/></a>
+            <a href="index.html"><img class="logo" src="logo.svg" alt="GLP GLANG LOGO" /></a>
         </div>
-       
+
     </div>
     <div class="main">
         <div>
@@ -32,15 +41,15 @@
             <h3>GLANG is a new hyper-functional programming language</h3>
             <h3 class="black fg-black">Get Started</h3>
             <h3 class="fg-black">Quick // Easy Start</h3>
-            <h3>Download the <a href="https://github.com/itsgerassimos/GLP/releases">GLANG I/O latest release</a> and
+            <h3>Download the <a href="./download.html">GLANG I/O latest release</a> and
                 open the command line</h3>
             <h3 class="fg-black">Advanced Start</h3>
-            <h3>Fork the <a href="https://github.com/itsgerassimos/GLP">GLP repo</a>, customize the 
+            <h3>Fork the <a href="https://github.com/itsgerassimos/GLP">GLP repo</a>, customize the
 
                 <a href="https://github.com/itsgerassimos/GLP/blob/main/modules/libraries/std-raw.js">std-raw.js</a>
                 (if you want to expand the standard library), type node main.js and start running code
             </h3>
-            
+
             <h3 class="fg-black">Easy Examples</h3>
 
             <div class="code-block">
@@ -80,20 +89,21 @@
             </div>
         </div>
     </div>
+
     <div class="main">
         <div>
-            <h3 class="black fg-black">Philosophy</h3>
-
-            <h3 class="fg-black">How to call functions</h3>
-
+            <div>
+                <h3 class="black fg-black">Philosophy</h3>
+                <h3 class="fg-black">How to call functions</h3>
+            </div>
             <div class="code-block">
                 <h3>Type functional commands in the form of:</h3>
                 <h3>(function-name (arg) ... (arg))</h3>
             </div>
-
             <div class="code-block">
                 <h3>which calls function-name passing all following if any:</h3>
                 <h3>(arg) ... (arg)</h3>
+
             </div>
 
         </div>
@@ -106,7 +116,9 @@
 
         </div>
     </div>
-    <div class="intro">
+
+
+    <div class="intro outro">
         <div>
             <h2 class="black">GLP // GLANG</h2>
             <h3>empower your code with GLANG</h3>
@@ -115,7 +127,7 @@
             <h4>Copyright © Gerassimos Moutafis 2024</h4>
         </div>
         <div class="center">
-            <img src="logo.svg" alt="GLP GLANG LOGO" />
+            <img class="logo-end" src="logo.svg" alt="GLP GLANG LOGO" />
         </div>
     </div>
 </body>

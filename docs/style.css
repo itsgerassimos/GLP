@@ -2,6 +2,16 @@
   --bg-color: #000000;
   --green-color: #5EFFB1;
   --white-color: #FFFFFF;
+
+  --bg-color: #000000;
+  --green-color: #5fe2a3;
+  --white-color: #ffffff;
+}
+h1 {
+  color: var(--green-color);
+}
+h2 {
+  color: var(--white-color);
 }
 
 *,
@@ -33,29 +43,25 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
-
 }
 
-
-.black{
+.black {
   font-weight: 900;
 }
 
-.fg-black{
+.fg-black {
   color: var(--bg-color);
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
 }
 
-.intro{
+.intro {
   display: flex;
-
+  justify-content: center;
 }
-
-
 
 #intro > div:first-child {
   flex: 4;
@@ -65,163 +71,263 @@ html {
   flex: 4;
 }
 
-.main{
+.main {
   background: var(--green-color);
-
+  padding: 1.5rem;
 }
 
-
-
-.code-block{
+.code-block {
   background: var(--bg-color);
   color: var(--white-color);
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 3rem;
   border-radius: 3rem;
-
-
 }
-
-
-
-
-
-
 
 a:link {
+  opacity: 1;
+
   font-weight: 900;
   text-decoration: underline;
+  transition: opacity .5s ease-in-out;
+
 }
-
-
-
-.menu{
+a:link:hover {
+opacity: .5;
+  
+}
+.menu {
   display: flex;
-
 }
 .menu h4 a {
   text-decoration: none;
 }
 
-
-.underline{
+.underline {
   text-decoration: underline;
 }
 
-
-.osses{
+.osses {
   display: flex;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1{
-  color: var(--green-color);
-}
-h2{
-
-  color: var(--white-color);
-
+.flex-center{
+  display: flex;
+  justify-content: center;
 }
 
+.download-button {
+  margin-top: 2rem;
 
-h3{
+  background: var(--green-color);
+  border-radius: 0.3rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  padding: 0.5rem;
+  transition: background 1s ease-in-out;
 
-  padding: 1rem;
+  a:link{
+    text-decoration: none;
 
-}
-h4{
-  padding: 1rem;
+  }
+  
+  h2 {
+    
+    color: black;
 
-}
-
-.intro{
-  padding: 10rem;
-
-}
-.main{
-  padding: 10rem;
-  padding-top: 5rem;
-}
-
-
-
-.code-block > h3:first-child {
-  font-weight: 500;
-  font-size: 2rem;
+  }
 }
 
-.code-block > h3:last-child {
-  flex: 4;
-  font-size: 2rem;
-
+.download-button:hover{
+  background: red;
 }
 
-h1{
-  font-size: 128px;
-}
-
-h2{
-  font-size: 96px;
-
-
-}
-h3{
-  font-size: 64px;
-
-}
-h4{
-  font-size: 32px;
-
-}
-@media screen and (max-width: 1000px) {
-	h1{
+  h1 {
     font-size: 3rem;
   }
-  h2{
+  h2 {
     font-size: 2rem;
-  
   }
-  h3{
+  h3 {
     font-size: 1.75rem;
-  
   }
-  h4{
+  h4 {
     font-size: 1rem;
-
-  
   }
-  .intro{
+  .intro {
     padding: 1rem;
-  
-  }
-  .main{
-    padding: 3rem;
-    padding-top: 2rem;
   }
 
-  
+
+  .code-block > h3:first-child {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .code-block > h3:last-child {
+    flex: 4;
+    font-size: 1rem;
+  }
+
+.toggle {
+  display: none;
+}
+.menu {
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0;
+
+  padding-top: 1rem;
+}
+.menu > h4 {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.75rem;
+
+  padding: 0;
+}
+.intro {
+  padding: 2rem;
+
+}
+
+.main{
+  div{
+    h3{
+      padding: .5rem;
+
+    }
+  }
+}
+
+.code-block{
+  margin: .25rem;
+  margin-top: 1rem;
+
+}
+
+.outro {
+  flex-direction: row;
+  padding: 2rem;
+}
+
 .code-block > h3:first-child {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .code-block > h3:last-child {
   flex: 4;
   font-size: 1rem;
+}
+
+.logo {
+  width: 10rem;
+}
+.logo-end {
+  width: 4rem;
+}
+
+h3 {
+  padding: 0;
+}
+.code-block {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+div{
+  max-width: 34rem;
+  width: 100%;
+
+}  
 
 }
+.documentation{  
+  flex-direction: column;
+  align-items: center;
+
+}
+.download{  
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+@media screen and (min-width: 1000px) {
+ 
+
+
+
+  .intro {
+    padding: 5rem;
+    padding-top: 10rem;
+
+    padding-bottom: 0rem;
+  }
+  .main {
+    padding-top: 5rem;
+    
+  }
+  .logo{
+    width: 30rem;
+  }
+
+  .code-block > h3:first-child {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  .code-block > h3:last-child {
+    flex: 4;
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 32px;
+  }
+  .menu > h4 {
+    font-size: 2rem;
+  }
+.logo-end{
+  width: 25rem;
+
+}
+  .main {
+
+  div{
+    max-width: 50rem;  
+  }  
+  
+  }
+
 }
