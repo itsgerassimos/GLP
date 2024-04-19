@@ -5,6 +5,8 @@
 
   --bg-color: #000000;
   --green-color: #5fe2a3;
+  --dark-green-color:rgb(68, 162, 117);
+
   --white-color: #ffffff;
 }
 h1 {
@@ -141,6 +143,12 @@ opacity: .5;
   }
 }
 
+
+::selection {
+  color: var(--white-color);
+
+  background: var(--dark-green-color);
+}
 .download-button:hover{
   background: red;
 }
