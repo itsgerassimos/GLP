@@ -1,4 +1,9 @@
 BUILD GLP
 use pkg:
 npm install -g pkg
-pkg -t node18-linux-x64,node18-macos-x64,node18-win main.js
+
+WINDOWS:
+pkg -t node18 main.js 
+
+LINUX / MAC OS  UNTESTED
+pkg -t node18-linux-x64,node18-macos-x64 main.js
