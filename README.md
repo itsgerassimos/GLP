@@ -28,26 +28,28 @@ GLANG is a new hyper-functional programming language
 Detailed Getting-Started guide and documentation are available here: https://itsgerassimos.github.io/GLP/
 
 For a quick heads-up download the [GLANG I/O latest release](https://github.com/itsgerassimos/GLP/releases) and open the GLANG command line. Then start typing functional commands like:
-```
-(print Hello World);
-```
+### Hello World
+`(print Hello World);`
 
-```
-(ifelse (more 5 3) (print 5) (print 3));
-```
+### If Blocks
+`(ifelse (more 5 3) (print 5) (print 3));`
 
-```
-(create a (1)); (while (less (a) 10) (actions (set a (add (a) 1)) (print (a) ) )));
-```
+### While Loops
+`(create a (1)); (while (less (a) 10) (actions (set a (add (a) 1)) (print (a) ) )));`
 
-```
-(for (i) (0) (less (i) 10) (actions (set i (add (i) 1)) (print (i)) ))
-```
+### For Loops
+`(for (i) (0) (less (i) 10) (actions (set i (add (i) 1)) (print (i)) ))`
 
-```
-(makeFunction reversePrint (actions (print (c)) (print (b)) (print (a))) () a b c);
-(reversePrint Hello GPL World);
-```
+### Function that prints in reverse
+#### It takes in args a b c, does 3 consecutive actions and returns nothing ()
+`(makeFunction reversePrint (actions (print (c)) (print (b)) (print (a))) () a b c);`
+
+`(reversePrint Hello GPL World);`
+
+More examples will be added here:
+
+https://github.com/itsgerassimos/GLP/wiki/Example-Code
+
 
 ![318423470-ac6966f4-57eb-4b86-9ed6-b72671350a35](https://github.com/itsgerassimos/itsgerassimos/assets/136891956/19f0cc51-0164-4385-8c40-0645f07d478d)
 
