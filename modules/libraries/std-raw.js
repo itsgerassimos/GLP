@@ -104,17 +104,18 @@ function log(...args) {
     console.log(...args);
   }
 
+  /// Input function is not available yet! As it was bugged...
 
   /// Known Bug! Fix coming soon! Read input from the user.
   /// @param {string} prompt - The prompt to display to the user.
   /// @returns {Promise<string>} - A promise resolving to the user's input.
-  function input(prompt) {
-    return new Promise((resolve) => {
-      IOS.question(prompt, (userInput) => {
-        resolve(userInput);
-      });
-    });
-  }
+  // function input(prompt) {
+  //   return new Promise((resolve) => {
+  //     IOS.question(prompt, (userInput) => {
+  //       resolve(userInput);
+  //     });
+  //   });
+  // }
   
   //// Comparison
   function more(a, b) {

@@ -46,9 +46,6 @@ Type functional commands in the form of:
         (\x1b[92mprint\x1b[0m \x1b[34m(arg)\x1b[0m):
         Prints the value of \x1b[34m(arg)\x1b[0m
 
-        (\x1b[92minput\x1b[0m \x1b[34m(arg)\x1b[0m):
-        Returns value of \x1b[34m(arg)\x1b[0m after it being typed by user
-
         (\x1b[92mif\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         (\x1b[92mifelse\x1b[0m \x1b[34m(arg) ... (arg)\x1b[0m):
         Performs conditional branching where first \x1b[0m\x1b[34m(arg)\x1b[0m is a condition, 
